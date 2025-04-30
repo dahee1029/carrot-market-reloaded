@@ -4,12 +4,18 @@ export default function Home() {
       <div className="bg-white shadow-lg p-5 rounded-3xl w-full max-w-screen-sm dark:bg-gray-600 flex flex-col gap-2 md:flex-row">
         <input
           type="email"
-          placeholder="Search"
-          className="w-full rounded-full py-3 bg-gray-200  pl-5 outline-none ring ring-transparent focus:ring-orange-500 focus:ring-offset-2 transition-shadow placeholder:drop-shadow peer"
+          required
+          placeholder="Email address"
+          className="w-full rounded-full py-3 bg-gray-200  pl-5 outline-none ring ring-transparent focus:ring-orange-500 focus:ring-offset-2 transition-shadow placeholder:drop-shadow  peer"
         />
-        <button className="bg-black bg-opacity-80 text-white py-2 rounded-full 
-        focus:scale-90 transition-transform font-medium md:px-5  peer:invalid:bg-red-500">
-          Search
+        <span className="text-red-500 font-medium hidden peer-invalid:block">
+          Email is required...
+        </span>
+        <button
+          className="bg-black bg-opacity-80 text-white py-2 rounded-full 
+        focus:scale-90 transition-transform font-medium md:px-5  peer-valid:bg-green-500"
+        >
+          Log In
         </button>
       </div>
     </main>
